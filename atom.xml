@@ -6,7 +6,7 @@
   <link href="https://blog.subrecovery.top/atom.xml" rel="self"/>
   
   <link href="https://blog.subrecovery.top/"/>
-  <updated>2024-04-05T14:28:32.634Z</updated>
+  <updated>2024-04-06T11:07:39.307Z</updated>
   <id>https://blog.subrecovery.top/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>书生·浦语大模型实战营三</title>
+    <link href="https://blog.subrecovery.top/InternLM-3/"/>
+    <id>https://blog.subrecovery.top/InternLM-3/</id>
+    <published>2024-04-06T09:48:48.000Z</published>
+    <updated>2024-04-06T11:07:39.307Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="RAG"><a href="#RAG" class="headerlink" title="RAG"></a>RAG</h1><p>在深度学习的发展历程中，语言模型已经成为一个不可或缺的重要组成部分。它们不仅能够完成自然语言处理（NLP）中的各种任务，如文本分类、情感分析、机器翻译等，而且也能够生成接近人类写作风格的文本。但尽管有这些进步，语言模型仍然面临着一些挑战，特别是在处理知识密集型任务时。例如，长文本生成、复杂问题回答或专业领域咨询等情境，它们往往需要访问大量的外部知识。此外，模型生成的内容有时候会出现与现实或已知事实不符的情况，这在业界被称为“幻觉”，另外还有知识过时问题，以及缺乏透明、可追溯的推理过程等问题。</p><span id="more"></span><p>为了解决这些问题，最近提出了一种称为Retrieval Augmented Generation（RAG）的技术。RAG的核心思想是结合了传统的生成式语言模型（如GPT）和信息检索机制。它通过动态检索与用户输入相关的信息片段，然后将这些信息作为上下文输入到生成模型中，从而生成更准确、内容更丰富的回答。RAG技术的显著优点在于它能够将基础模型与外部知识库相结合，实现非参数知识的更新，这意味着模型能够在无需再次训练的情况下，接入并利用新的知识。</p><h1 id="茴香豆助手在线试用"><a href="#茴香豆助手在线试用" class="headerlink" title="茴香豆助手在线试用"></a>茴香豆助手在线试用</h1><p><img src="/InternLM-3/image-20240406181812790.png" alt="image-20240406181812790"></p><p><img src="/InternLM-3/image-20240406181840827.png" alt="image-20240406181840827"></p><p><img src="/InternLM-3/image-20240406181908413.png" alt="image-20240406181908413"></p><p><img src="/InternLM-3/image-20240406181931057.png" alt="image-20240406181931057"></p><p><img src="/InternLM-3/image-20240406182025648.png" alt="image-20240406182025648"></p><h1 id="茴香豆技术助手笔记"><a href="#茴香豆技术助手笔记" class="headerlink" title="茴香豆技术助手笔记"></a>茴香豆技术助手笔记</h1><p>茴香豆技术助手是由上海AI实验室开发的一款基于大型语言模型的技术辅助系统。它旨在为算法开发者提供帮助，特别是在开源算法项目，如OpenMMLab中的计算机视觉和深度学习项目方面，通过即时通讯工具（如微信和飞书）中的群聊功能，提供有关技术问题的深入回答。</p><p>该系统通过多次迭代改进和试验，成功开发出一个复杂的技术聊天助手，能够有效地回答用户的技术问题，同时避免了信息泛滥。HuixiangDou的主要贡献包括：为群聊场景设计算法管道、验证text2vec在任务拒绝中的可靠性能、确定LLM在技术助手产品中的三个关键需求，即评分能力、上下文学习和长文本处理能力。</p><p>HuixiangDou的设计考虑到了群聊环境的独特性，例如，它不会对非技术内容做出回应，如政治、闲聊或个人信息，仅在用户真正需要帮助时，对技术性询问提供回应。此外，系统严格避免产生幻觉，即避免制造任何对理解的错误印象。它还具备领域特定的知识理解能力，并且可以以相对较低的成本更新知识库的版本内容。</p><p>技术助手的发展历程经历了从基础版本（”匕首”）到改进版本（”长矛”），再到最终版本（”耙”）。在这个过程中，开发团队通过增加拒绝管道和响应管道，提高了拒绝回答非技术内容的精确度，并增强了LLM的长文本处理能力，以提高提供满意答案的可能性。</p><p>HuixiangDou的实验部分展示了使用text2vec进行拒绝回答的可行性，以及多种搜索方法可以显著减少LLM引起的幻觉。尽管如此，随着用户问题的专业性增加，基于提示和搜索方法提供满意回答的难度也在增加。这要求LLM必须真正理解仓库中的源代码，而高效的进一步预训练可能是下一阶段的解决方案。</p><h1 id="部署茴香豆技术助手"><a href="#部署茴香豆技术助手" class="headerlink" title="部署茴香豆技术助手"></a>部署茴香豆技术助手</h1><h2 id="在线"><a href="#在线" class="headerlink" title="在线"></a>在线</h2><p><img src="/InternLM-3/image-20240406185056806.png" alt="image-20240406185056806"></p><h2 id="本地"><a href="#本地" class="headerlink" title="本地"></a>本地</h2><p><img src="/InternLM-3/image-20240406182246148.png" alt="image-20240406182246148"></p><p><img src="/InternLM-3/image-20240406182311385.png" alt="image-20240406182311385"></p><p><img src="/InternLM-3/image-20240406182323714.png" alt="image-20240406182323714"></p><p><img src="/InternLM-3/image-20240406182339477.png" alt="image-20240406182339477"></p><h1 id="进阶作业A"><a href="#进阶作业A" class="headerlink" title="进阶作业A"></a>进阶作业A</h1><p>做不了一点</p><p>飞书和微信的回调都失败了</p><p>能不能写一个纯api调用的，我自己有qq的bot</p><h1 id="大作业选题A"><a href="#大作业选题A" class="headerlink" title="大作业选题A"></a>大作业选题A</h1><p>但我想部署到QQ</p>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;RAG&quot;&gt;&lt;a href=&quot;#RAG&quot; class=&quot;headerlink&quot; title=&quot;RAG&quot;&gt;&lt;/a&gt;RAG&lt;/h1&gt;&lt;p&gt;在深度学习的发展历程中，语言模型已经成为一个不可或缺的重要组成部分。它们不仅能够完成自然语言处理（NLP）中的各种任务，如文本分类、情感分析、机器翻译等，而且也能够生成接近人类写作风格的文本。但尽管有这些进步，语言模型仍然面临着一些挑战，特别是在处理知识密集型任务时。例如，长文本生成、复杂问题回答或专业领域咨询等情境，它们往往需要访问大量的外部知识。此外，模型生成的内容有时候会出现与现实或已知事实不符的情况，这在业界被称为“幻觉”，另外还有知识过时问题，以及缺乏透明、可追溯的推理过程等问题。&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>书生·浦语大模型实战营二</title>
